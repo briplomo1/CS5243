@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: cs5243
+Version: 2026.1
+Summary: Shared infrastructure for UTSA CS 5243 Computer Vision assignments
+Requires-Python: <3.12,>=3.11

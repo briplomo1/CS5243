@@ -1,0 +1,93 @@
+assignment: A1
+title: "Assignment 1: Image Representation and Visual Exploration"
+assignment_version: A1-2026.1
+environment_version: "2026.1"
+individual: true
+max_file_size_mb: 25
+warn_file_size_mb: 10
+
+identity:
+  name_component_pattern: "[^\\s]+(?:[ '\\-][^\\s]+)*"
+  abc123_pattern: "[A-Za-z]{3}[0-9]{3}"
+
+notebook:
+  filename: A1.ipynb
+  html_filename: A1.html
+  executed: true
+  warn_absolute_paths: true
+  required_html_markers: ["Assignment 1", "A1-2026.1", "2026.1"]
+  required_sections:
+    - "0. Student Information"
+    - "1. Assignment Overview and Learning Objectives"
+    - "2. Environment Verification"
+    - "3. Dataset and Problem Setup"
+    - "4. Core Implementation"
+    - "5. Required Experiments"
+    - "6. Results and Analysis"
+    - "7. Failure Analysis"
+    - "8. Extension"
+    - "9. Reflection and Reproducibility"
+    - "10. Submission Validation"
+
+preflight:
+  required_artifacts:
+    - {pattern: A1.ipynb, label: starter notebook}
+    - {pattern: src/a1_tools.py, label: provided A1 helpers}
+    - {pattern: src/student_code.py, label: student implementation module}
+    - {pattern: tests_public/test_a1_public.py, label: public sanity tests}
+  asset_manifest: A1/data/SHA256SUMS
+  required_functions:
+    path: src/student_code.py
+    names: [image_summary, crop_image, flip_horizontal, extract_channel, bgr_to_rgb, replace_region, contact_sheet, brighten_loop, brighten_vectorized, to_float01, to_uint8_safe, grayscale_mean, grayscale_luminance, hsv_rule, transform_frame]
+
+required_artifacts:
+  - {pattern: A1.ipynb, label: executed notebook}
+  - {pattern: A1.html, label: rendered HTML}
+  - {pattern: src/student_code.py, label: student source}
+  - {pattern: outputs/figures/image_overview.png, label: image overview figure}
+  - {pattern: outputs/figures/numpy_manipulations.png, label: NumPy manipulation figure}
+  - {pattern: outputs/figures/dtype_range_experiment.png, label: datatype experiment figure}
+  - {pattern: outputs/figures/color_representations.png, label: color representation figure}
+  - {pattern: outputs/figures/hsv_stability.png, label: HSV stability figure}
+  - {pattern: outputs/figures/video_contact_sheet.png, label: video contact sheet}
+  - {pattern: outputs/figures/failure_image.png, label: image failure evidence}
+  - {pattern: outputs/figures/failure_video.png, label: video failure evidence}
+  - {pattern: outputs/tables/image_metadata.csv, label: image metadata table}
+  - {pattern: outputs/tables/timing.csv, label: timing table}
+  - {pattern: outputs/tables/experiment_metrics.csv, label: experiment metrics table}
+  - {pattern: outputs/tables/video_metadata.json, label: video metadata}
+  - {pattern: outputs/videos/a1_transformed.mp4, label: transformed video}
+  - {pattern: outputs/extension/*, label: one principal extension artifact, minimum: 1}
+
+allowed_extensions: [.ipynb, .html, .py, .md, .png, .jpg, .jpeg, .csv, .json, .mp4, .txt]
+prohibited_patterns: ["datasets", "datasets/**", "env", "env/**", ".venv", ".venv/**", "checkpoints", "checkpoints/**", "*.pt", "*.pth", "*.ckpt", "*.onnx", "*.safetensors", "*.zip"]
+warning_patterns: ["data", "data/**", "config", "config/**", "__pycache__", "__pycache__/**", ".pytest_cache", ".pytest_cache/**", ".ipynb_checkpoints", ".ipynb_checkpoints/**", "cache", "cache/**", "caches", "caches/**", "*.tmp", "*~"]
+
+package:
+  include_patterns: [A1.ipynb, A1.html, "src/*.py", "outputs/figures/*", "outputs/tables/*", "outputs/videos/*", "outputs/extension/*"]
+
+artifact_schemas:
+  csv:
+    outputs/tables/image_metadata.csv: [filename, shape, height, width, channels, dtype, minimum, maximum, mean, bytes]
+    outputs/tables/timing.csv: [method, median_ms, repeats, outputs_equal]
+    outputs/tables/experiment_metrics.csv: [experiment, method, condition, metric, value, units]
+  json:
+    outputs/tables/video_metadata.json:
+      - input.path
+      - input.width
+      - input.height
+      - input.fps
+      - input.frame_count
+      - input.duration_seconds
+      - input.codec
+      - output.path
+      - output.width
+      - output.height
+      - output.fps
+      - output.frame_count
+      - output.duration_seconds
+      - output.codec
+      - read_back.valid
+      - read_back.checks.resolution
+      - read_back.checks.fps
+      - read_back.checks.frame_count

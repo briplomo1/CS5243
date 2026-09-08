@@ -1,0 +1,74 @@
+dataset_version: A1-2026.1
+seed: 5243
+license: CC0-1.0
+generation:
+  channel_order.png:
+    width: 720
+    height: 300
+    dtype: uint8
+    channels: RGB
+  color_shapes.png:
+    width: 640
+    height: 400
+    dtype: uint8
+    channels: RGB
+    scale: 1.0
+    warmth: 0.0
+  color_shapes_dim.png:
+    width: 640
+    height: 400
+    dtype: uint8
+    channels: RGB
+    scale: 0.56
+    warmth: 0.0
+    desaturate: 0.75
+  color_shapes_warm.png:
+    width: 640
+    height: 400
+    dtype: uint8
+    channels: RGB
+    scale: 0.88
+    warmth: 42.0
+  intensity_ramp_16bit.png:
+    width: 512
+    height: 256
+    dtype: uint16
+    channels: grayscale
+    range:
+    - 0
+    - 65535
+  portrait_scene.png:
+    width: 360
+    height: 540
+    dtype: uint8
+    channels: RGB
+  wide_scene.jpg:
+    width: 720
+    height: 300
+    dtype: uint8
+    channels: RGB
+    quality: 86
+    subsampling: 2
+color_target:
+  description: red rectangle shared by aligned color-shape variants
+  target_roi_xyxy:
+  - 55
+  - 65
+  - 225
+  - 245
+  background_roi_xyxy:
+  - 15
+  - 15
+  - 45
+  - 45
+  images:
+  - color_shapes.png
+  - color_shapes_dim.png
+  - color_shapes_warm.png
+video:
+  filename: moving_shapes.mp4
+  width: 320
+  height: 240
+  fps: 12
+  frames: 48
+  duration_seconds: 4.0

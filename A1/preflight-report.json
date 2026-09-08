@@ -1,0 +1,67 @@
+{
+  "assignment": "A1",
+  "assignment_version": "A1-2026.1",
+  "environment_version": "2026.1",
+  "mode": "preflight",
+  "student": {
+    "name": "REPLACE ME REPLACE ME",
+    "first_name": "REPLACE ME",
+    "last_name": "REPLACE ME",
+    "abc123": "replace me"
+  },
+  "valid": true,
+  "summary": {
+    "errors": 0,
+    "warnings": 8
+  },
+  "findings": [
+    {
+      "level": "warning",
+      "code": "abc123",
+      "message": "Enter a valid UTSA ABC123 identifier (three letters and three digits).",
+      "path": "A1.ipynb"
+    },
+    {
+      "level": "warning",
+      "code": "excluded-path",
+      "message": "This cache or temporary path will not be packaged.",
+      "path": "config"
+    },
+    {
+      "level": "warning",
+      "code": "excluded-path",
+      "message": "This cache or temporary path will not be packaged.",
+      "path": "data"
+    },
+    {
+      "level": "warning",
+      "code": "excluded-path",
+      "message": "This cache or temporary path will not be packaged.",
+      "path": "src/__pycache__"
+    },
+    {
+      "level": "warning",
+      "code": "excluded-path",
+      "message": "This cache or temporary path will not be packaged.",
+      "path": "tests_public/__pycache__"
+    },
+    {
+      "level": "warning",
+      "code": "placeholder-text",
+      "message": "Review unresolved placeholder text before submission.",
+      "path": "A1.ipynb"
+    },
+    {
+      "level": "warning",
+      "code": "resource-declaration",
+      "message": "Declare external resources and generative-AI assistance, or write None.",
+      "path": "A1.ipynb"
+    },
+    {
+      "level": "warning",
+      "code": "student-name",
+      "message": "Replace the first-name and last-name placeholders.",
+      "path": "A1.ipynb"
+    }
+  ]
+}

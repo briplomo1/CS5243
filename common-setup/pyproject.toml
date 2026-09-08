@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cs5243"
+version = "2026.1"
+description = "Shared infrastructure for UTSA CS 5243 Computer Vision assignments"
+requires-python = ">=3.11,<3.12"
+dependencies = []
+
+# Runtime dependencies are intentionally centralized in environment.yml. This
+# prevents an editable pip install from replacing Conda's platform builds.
+
+[tool.setuptools]
+packages = ["cs5243"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

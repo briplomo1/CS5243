@@ -1,0 +1,35 @@
+schema_version: 4
+description: Human-readable contract for public assignment-validation YAML.
+required_keys:
+  - assignment
+  - assignment_version
+  - environment_version
+  - individual
+properties:
+  assignment: Assignment identifier such as A1.
+  assignment_version: Version of the assignment content and validation contract.
+  environment_version: Expected cs5243 environment metadata version.
+  individual: Must be true for A1-A5.
+  identity.name_component_pattern: First-name and last-name validation expression.
+  identity.abc123_pattern: UTSA ABC123 validation expression.
+  required_artifacts: Labeled glob patterns and optional minimum match counts.
+  allowed_extensions: File suffixes permitted in the assignment directory.
+  prohibited_patterns: Dataset, environment, checkpoint, and model paths that block packaging.
+  warning_patterns: Cache and temporary paths reported as warnings and excluded from packaging.
+  max_file_size_mb: Per-file error threshold.
+  warn_file_size_mb: Per-file review-warning threshold.
+  notebook.filename: The one notebook validated for the assignment.
+  notebook.html_filename: The rendered HTML paired with the notebook.
+  notebook.required_html_markers: Assignment-specific evidence that must appear in rendered HTML.
+  notebook.required_sections: Exact Markdown headings required.
+  notebook.executed: Whether every nonempty code cell needs an execution count.
+  notebook.warn_absolute_paths: Warn about common machine-specific paths.
+  preflight.required_artifacts: Starter-only artifacts checked without final outputs.
+  preflight.asset_manifest: Workspace-relative (e.g. "A1/data/SHA256SUMS") SHA-256 manifest for immutable assignment assets.
+  preflight.required_functions: Source path and top-level function signatures inspected with AST without importing student code.
+  artifact_schemas.csv: Mapping of artifact paths to required CSV columns.
+  artifact_schemas.json: Mapping of artifact paths to required dotted JSON keys.
+  image_artifacts: Mapping of image paths to optional minimum width and height checks.
+  numeric_artifacts: Mapping of .npy paths to optional ndim, minimum-shape, and finite-value checks.
+  ply_artifacts: Mapping of ASCII PLY paths to optional minimum-vertex checks.
+  package.include_patterns: Explicit student artifacts eligible for the Canvas ZIP.

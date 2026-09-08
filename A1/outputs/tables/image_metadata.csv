@@ -1,0 +1,8 @@
+shape,height,width,channels,dtype,mean,nbytes,filename,minimum,maximum
+"(300, 720, 3)",300,720,3,uint8,86.47277160493827,648000,channel_order.png,35,255
+"(400, 640, 3)",400,640,3,uint8,179.68368229166666,768000,color_shapes.png,30,245
+"(400, 640, 3)",400,640,3,uint8,100.2257421875,768000,color_shapes_dim.png,16,121
+"(400, 640, 3)",400,640,3,uint8,165.47352864583334,768000,color_shapes_warm.png,7,255
+"(256, 512)",256,512,1,uint16,23065.513710021973,262144,intensity_ramp_16bit.png,0,65535
+"(540, 360, 3)",540,360,3,uint8,190.92805898491085,583200,portrait_scene.png,35,240
+"(300, 720, 3)",300,720,3,uint8,162.15793364197532,648000,wide_scene.jpg,0,255

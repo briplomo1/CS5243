@@ -1,0 +1,25 @@
+name: cs5243
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - jupyterlab
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - pillow
+  - opencv
+  - scikit-image
+  - scikit-learn
+  - imageio
+  - imageio-ffmpeg
+  - tqdm
+  - pytorch
+  - torchvision
+  - pytest
+  - nbconvert
+  - packaging
+  - pyyaml
+  - pip
