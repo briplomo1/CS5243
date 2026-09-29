@@ -1,0 +1,43 @@
+{
+  "assignment": "A2",
+  "assignment_version": "A2-2026.1",
+  "environment_version": "2026.1",
+  "mode": "full",
+  "student": {
+    "name": "Bryan Palomo",
+    "first_name": "Bryan",
+    "last_name": "Palomo",
+    "abc123": "tkq516"
+  },
+  "valid": true,
+  "summary": {
+    "errors": 0,
+    "warnings": 4
+  },
+  "findings": [
+    {
+      "level": "warning",
+      "code": "excluded-path",
+      "message": "This cache or temporary path will not be packaged.",
+      "path": "config"
+    },
+    {
+      "level": "warning",
+      "code": "excluded-path",
+      "message": "This cache or temporary path will not be packaged.",
+      "path": "data"
+    },
+    {
+      "level": "warning",
+      "code": "excluded-path",
+      "message": "This cache or temporary path will not be packaged.",
+      "path": "src/__pycache__"
+    },
+    {
+      "level": "warning",
+      "code": "excluded-path",
+      "message": "This cache or temporary path will not be packaged.",
+      "path": "tests_public/__pycache__"
+    }
+  ]
+}

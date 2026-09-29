@@ -1,0 +1,61 @@
+assignment: A2
+title: "Assignment 2: Image Processing and Pyramid Blending"
+assignment_version: A2-2026.1
+environment_version: "2026.1"
+individual: true
+max_file_size_mb: 25
+warn_file_size_mb: 10
+identity:
+  name_component_pattern: "[^\\s]+(?:[ '\\-][^\\s]+)*"
+  abc123_pattern: "[A-Za-z]{3}[0-9]{3}"
+notebook:
+  filename: A2.ipynb
+  html_filename: A2.html
+  executed: true
+  warn_absolute_paths: true
+  required_html_markers: ["Assignment 2", "A2-2026.1", "2026.1"]
+  required_sections: ["0. Student Information", "1. Assignment Overview and Learning Objectives", "2. Environment Verification", "3. Dataset and Problem Setup", "4. Core Implementation", "5. Required Experiments", "6. Results and Analysis", "7. Failure Analysis", "8. Extension", "9. Reflection and Reproducibility", "10. Submission Validation"]
+preflight:
+  required_artifacts:
+    - {pattern: A2.ipynb, label: starter notebook}
+    - {pattern: src/a2_tools.py, label: provided A2 helpers}
+    - {pattern: src/student_code.py, label: student implementation module}
+    - {pattern: tests_public/test_a2_public.py, label: public sanity tests}
+  asset_manifest: A2/data/SHA256SUMS
+  required_functions:
+    path: src/student_code.py
+    names: [convolve2d_manual, gaussian_kernel, sharpen_image, add_gaussian_noise, add_impulse_noise, median_filter_manual, normalize_contrast, histogram_equalize_gray, apply_gamma, gaussian_pyramid, laplacian_pyramid, reconstruct_laplacian_pyramid, laplacian_pyramid_blend]
+required_artifacts:
+  - {pattern: A2.ipynb, label: executed notebook}
+  - {pattern: A2.html, label: rendered HTML}
+  - {pattern: src/student_code.py, label: student source}
+  - {pattern: outputs/tables/experiment_metrics.csv, label: cumulative experiment metrics}
+  - {pattern: outputs/tables/pyramid_metrics.json, label: pyramid metadata}
+  - {pattern: outputs/figures/filtering_results.png, label: filtering figure}
+  - {pattern: outputs/figures/denoising_comparison.png, label: denoising figure}
+  - {pattern: outputs/figures/contrast_enhancement.png, label: contrast figure}
+  - {pattern: outputs/figures/pyramid_visualization.png, label: pyramid visualization}
+  - {pattern: outputs/figures/pyramid_reconstruction.png, label: reconstruction figure}
+  - {pattern: outputs/figures/blending_comparison.png, label: blending figure}
+  - {pattern: outputs/figures/pyramid_decomposition.png, label: pyramid decomposition figure}
+  - {pattern: outputs/figures/failure_analysis.png, label: failure evidence}
+  - {pattern: outputs/extension/*, label: one extension artifact, minimum: 1}
+allowed_extensions: [.ipynb, .html, .py, .md, .png, .jpg, .jpeg, .csv, .json, .txt]
+prohibited_patterns: ["datasets", "datasets/**", "env", "env/**", ".venv", ".venv/**", "checkpoints", "checkpoints/**", "*.pt", "*.pth", "*.ckpt", "*.onnx", "*.safetensors", "*.zip"]
+warning_patterns: ["data", "data/**", "config", "config/**", "__pycache__", "__pycache__/**", ".pytest_cache", ".pytest_cache/**", ".ipynb_checkpoints", ".ipynb_checkpoints/**", "cache", "cache/**", "caches", "caches/**", "*.tmp", "*~"]
+package:
+  include_patterns: [A2.ipynb, A2.html, "src/*.py", "outputs/figures/*", "outputs/tables/*", "outputs/extension/*"]
+artifact_schemas:
+  csv:
+    outputs/tables/experiment_metrics.csv: [experiment, method, condition, metric, value, units]
+  json:
+    outputs/tables/pyramid_metrics.json: [levels, level_shapes, reconstruction.max_abs_error, reconstruction.mean_abs_error, reconstruction.dtype]
+image_artifacts:
+  outputs/figures/filtering_results.png: {min_width: 600, min_height: 250}
+  outputs/figures/denoising_comparison.png: {min_width: 600, min_height: 400}
+  outputs/figures/contrast_enhancement.png: {min_width: 600, min_height: 250}
+  outputs/figures/pyramid_visualization.png: {min_width: 600, min_height: 400}
+  outputs/figures/pyramid_reconstruction.png: {min_width: 600, min_height: 250}
+  outputs/figures/blending_comparison.png: {min_width: 600, min_height: 250}
+  outputs/figures/pyramid_decomposition.png: {min_width: 600, min_height: 600}
+  outputs/figures/failure_analysis.png: {min_width: 600, min_height: 400}

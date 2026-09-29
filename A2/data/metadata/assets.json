@@ -1,0 +1,176 @@
+{
+  "generator_seed": 5243,
+  "license": "CC0-1.0 (synthetic assets) / legacy course teaching photographs, hard-edged masks (blend3, blend4 \u2014 see A2/ATTRIBUTION.md)",
+  "images": {
+    "test_pattern_gray.png": {
+      "shape": [
+        255,
+        383
+      ],
+      "dtype": "uint8"
+    },
+    "color_scene.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "gaussian_noisy.png": {
+      "shape": [
+        255,
+        383
+      ],
+      "dtype": "uint8"
+    },
+    "impulse_noisy.png": {
+      "shape": [
+        255,
+        383
+      ],
+      "dtype": "uint8"
+    },
+    "blend_left.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "blend_right.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "blend_mask.png": {
+      "shape": [
+        257,
+        385
+      ],
+      "dtype": "uint8"
+    },
+    "blend_mask_spot.png": {
+      "shape": [
+        257,
+        385
+      ],
+      "dtype": "uint8"
+    },
+    "blend2_left.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "blend2_right.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "blend2_mask.png": {
+      "shape": [
+        257,
+        385
+      ],
+      "dtype": "uint8"
+    },
+    "blend3_left.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "blend3_right.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "blend3_mask.png": {
+      "shape": [
+        257,
+        385
+      ],
+      "dtype": "uint8"
+    },
+    "blend4_left.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "blend4_right.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "blend4_mask.png": {
+      "shape": [
+        257,
+        385
+      ],
+      "dtype": "uint8"
+    },
+    "exposure_under.png": {
+      "shape": [
+        257,
+        385,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "difficult_high_frequency.png": {
+      "shape": [
+        193,
+        319
+      ],
+      "dtype": "uint8"
+    }
+  },
+  "aligned_sets": {
+    "blend_vertical": [
+      "blend_left.png",
+      "blend_right.png",
+      "blend_mask.png"
+    ],
+    "blend_spot": [
+      "blend_left.png",
+      "blend_right.png",
+      "blend_mask_spot.png"
+    ],
+    "blend_diagonal": [
+      "blend2_left.png",
+      "blend2_right.png",
+      "blend2_mask.png"
+    ],
+    "blend_real_fruit_vertical_hard": [
+      "blend3_left.png",
+      "blend3_right.png",
+      "blend3_mask.png"
+    ],
+    "blend_real_fruit_circular_hard": [
+      "blend4_left.png",
+      "blend4_right.png",
+      "blend4_mask.png"
+    ]
+  }
+}

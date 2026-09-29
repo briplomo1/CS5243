@@ -1,0 +1,31 @@
+{
+  "levels": 4,
+  "level_shapes": [
+    [
+      257,
+      385,
+      3
+    ],
+    [
+      129,
+      193,
+      3
+    ],
+    [
+      65,
+      97,
+      3
+    ],
+    [
+      33,
+      49,
+      3
+    ]
+  ],
+  "reconstruction": {
+    "max_abs_error": 1.4901161193847656e-08,
+    "mean_abs_error": 1.8900355239215294e-11,
+    "dtype": "float32"
+  },
+  "source_image": "color_scene.png"
+}
